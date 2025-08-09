@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  flutter-dev:
+    build: .
+    container_name: clear-captioning-dev
+    volumes:
+      # Mount the current directory to /app in the container
+      - .:/app
+      # Mount a named volume for Flutter cache to persist between container rebuilds
+      - flutter_cache:/home/flutter/.flutter
+      # Mount pub cache for faster dependency resolution
+      - pub_cache:/home/flutter/.pub-cache
+    ports:
+      # Flutter web dev server
+      - "3000:3000"
+      # Flutter debugging
+      - "8080:8080"
+      # Observatory/DevTools
+      - "9999:9999"
+    environment:
+      - FLUTTER_WEB_PORT=3000
+    working_dir: /app
+    stdin_open: true
+    tty: true
+    command: bash
+
+volumes:
+  flutter_cache:
+  pub_cache:

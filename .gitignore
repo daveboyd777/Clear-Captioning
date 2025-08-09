@@ -25,3 +25,41 @@ doc/api/
 
 .flutter-plugins
 .flutter-plugins-dependencies
+
+# Docker related
+.dockerignore
+
+# Additional Flutter/IDE files
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+.atom/
+.buildlog/
+.history
+.svn/
+migrate_working_dir/
+
+# IntelliJ related
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# VS Code (uncomment if you want to exclude VS Code settings)
+#.vscode/
+
+# Flutter specific
+**/ios/Flutter/flutter_assets/
+**/ios/Flutter/flutter_export_environment.sh
+**/ios/Flutter/packages
+**/ios/Pods/
+**/ios/Runner/flutter_assets/
+**/ios/ServiceDefinitions.json
+**/ios/Runner/GeneratedPluginRegistrant.*
+
+# Android Studio build artifacts
+/android/app/debug
+/android/app/profile
+/android/app/release
