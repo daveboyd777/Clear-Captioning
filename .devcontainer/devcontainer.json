@@ -1,4 +1,6 @@
+// For schema validation, see: https://containers.dev/implementors/json_reference/
 {
+  "$schema": "https://raw.githubusercontent.com/devcontainers/spec/main/schemas/devcontainer.json",
   "name": "Clear-Captioning Flutter Dev Container",
   "dockerComposeFile": "docker-compose.yml",
   "service": "flutter-dev",
